@@ -88,9 +88,12 @@ body {
   }
 }
 #banner {
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-bottom: 4rem;
   h1 {
     text-align: center;
+    color: $white;
     font-size: 3rem;
     font-weight: 300;
     letter-spacing: 1px;
@@ -99,8 +102,8 @@ body {
   }
 }
 
-.podcast_banner {
-
+.podcasts_banner {
+  background-image: image-url("podcast_banner.jpeg");
 }
 
 .sign_up_banner {
