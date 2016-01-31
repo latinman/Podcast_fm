@@ -4,13 +4,13 @@
       <h1><%= @podcast.title %></h1>
       <p class="description"><%= @podcast.description %></p>
       <% unless @podcast.itunes.blank? %>
-        <a href="<%= @podcast.itunes %>" class="subscribe_link">iTunes</a>
+          <a href="<%= @podcast.itunes %>" class="subscribe_link">iTunes</a>
       <% end %>
       <% unless @podcast.stitcher.blank? %>
-        <a href="<%= @podcast.stitcher %>" class="subscribe_link">Stitcher</a>
+          <a href="<%= @podcast.stitcher %>" class="subscribe_link">Stitcher</a>
       <% end %>
       <% unless @podcast.podbay.blank? %>
-        <a href="<%= @podcast.podbay %>" class="subscribe_link">PodBay</a>
+          <a href="<%= @podcast.podbay %>" class="subscribe_link">PodBay</a>
       <% end %>
     </div>
   </div>
@@ -19,7 +19,17 @@
         All Podcasts
         <span>/</span>
         <%= link_to @podcast.title, podcast_path(@podcast) %>
+        <span>/</span>
+        <%= @episode.title %>
     <% end %>
+  </div>
+
+  <div id="episode_content">
+    <div class="wrapper_skinny">
+      <img src="images/IMG_0700.jpg" alt="Toothy" class="current_episode_thumbnail">
+      <h2><%= @episode.title %></h2>
+      <p class="description"><%= @episode.description %></p>
+    </div>
   </div>
   <div id="episodes">
     <div class="wrapper_skinny">
@@ -27,7 +37,7 @@
         <% @episodes.each do |episode| %>
             <li class="cf">
               <div class="episode_thumbnail">
-                <a href="#">
+                <a href="episode.html">
                   <img src="images/IMG_0700.jpg" alt="Tooth">
                 </a>
               </div>
@@ -36,7 +46,7 @@
                 <p class="description"><%= truncate(episode.description, length: 160) %></p>
               </div>
             </li>
-         <% end %>
+        <% end %>
       </ul>
     </div>
   </div>
