@@ -11,6 +11,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'paperclip'
 gem 'aws-sdk', '< 2.0'
+gem 'font-awesome-sass', '~> 4.5.0'
 
 group :development, :test do
   gem 'byebug'
