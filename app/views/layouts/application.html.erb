@@ -8,9 +8,11 @@
 </head>
 <body>
 
-<% flash.each do |key, value| %>
-    <%= content_tag :div, value, class: "alert alert-#{key}" %>
-<% end %>
+<div id="notice_wrapper">
+    <% flash.each do |key, value| %>
+        <%= content_tag :div, value, class: "alert alert-#{key}" %>
+    <% end %>
+</div>
 
 <% unless current_page?(root_path) %>
     <%= render "layouts/header" %>
@@ -18,5 +20,12 @@
 
     <%= yield %>
 
+<script>
+  setTimeout(function() {
+     $("#notice_wrapper").fadeOut("slow", function() {
+        $(this).remove();
+     });
+  }, 4500);
+</script>
 </body>
 </html>

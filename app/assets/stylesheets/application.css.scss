@@ -31,6 +31,17 @@ body {
   clear: both;
 }
 
+#notice_wrapper {
+  width: 100%;
+  position: absolute;
+  background: rgba(208, 103, 82, 0.85);
+  z-index: 999;
+  color: $white;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
 .button {
   color: $white;
   text-decoration: none;
