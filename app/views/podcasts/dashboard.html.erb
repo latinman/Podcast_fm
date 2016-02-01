@@ -40,9 +40,5 @@
 </div>
 </div>
 </div>
-<div class="pagination">
-  <span class="previous_page disbaled">Previous</span>
-  <em class="current">1</em>
-  <a href="#">2</a>
-  <a class="next_page" href="#">Next</a>
-</div>
+
+<%= will_paginate @episodes, previous_page: "Previous", next_page: "Next" %>

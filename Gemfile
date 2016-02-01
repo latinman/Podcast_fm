@@ -12,6 +12,7 @@ gem 'devise'
 gem 'paperclip'
 gem 'aws-sdk', '< 2.0'
 gem 'font-awesome-sass', '~> 4.5.0'
+gem 'will_paginate', '~> 3.1'
 
 group :development, :test do
   gem 'byebug'
